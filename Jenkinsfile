@@ -1,5 +1,9 @@
 pipeline {
-    agent { docker { image 'node:20.10.0-alpine3.19' } }
+    agent {
+        docker {
+            dockerfile 'Dockerfile'
+        }
+    }
     stages {
         stage('install') {
             steps {
